@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+form.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006eff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056c1;
+}
+
+.alert {
+    text-align: center;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    form.form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: span 1;
+    }
+}
